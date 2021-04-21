@@ -1,0 +1,56 @@
+/* `margin`
+-------------------------------------------------- */
+
+/**
+ * `margin`
+ */
+
+ @each $token, $value in $spacing-values {
+  .u-margin--#{$token} {
+    margin: $value !important;
+  }
+}
+
+
+/**
+ * `margin-bottom`
+ */
+
+@each $token, $value in $spacing-values {
+  .u-margin-bottom--#{$token} {
+    margin-bottom: $value !important;
+  }
+}
+
+
+/**
+ * `margin-left`
+ */
+
+@each $token, $value in $spacing-values {
+  .u-margin-left--#{$token} {
+    margin-left: $value !important;
+  }
+}
+
+
+/**
+ * `margin-right`
+ */
+
+@each $token, $value in $spacing-values {
+  .u-margin-right--#{$token} {
+    margin-right: $value !important;
+  }
+}
+
+
+/**
+ * `margin-top`
+ */
+
+@each $token, $value in $spacing-values {
+  .u-margin-top--#{$token} {
+    margin-top: $value !important;
+  }
+}

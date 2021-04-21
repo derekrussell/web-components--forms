@@ -1,0 +1,55 @@
+/* `padding`
+-------------------------------------------------- */
+
+/**
+ * `padding`
+ */
+
+ @each $token, $value in $spacing-values {
+  .u-padding--#{$token} {
+    padding: $value !important;
+  }
+}
+
+/**
+ * `padding-bottom`
+ */
+
+@each $token, $value in $spacing-values {
+  .u-padding-bottom--#{$token} {
+    padding-bottom: $value !important;
+  }
+}
+
+
+/**
+ * `padding-left`
+ */
+
+@each $token, $value in $spacing-values {
+  .u-padding-left--#{$token} {
+    padding-left: $value !important;
+  }
+}
+
+
+/**
+ * `padding-right`
+ */
+
+@each $token, $value in $spacing-values {
+  .u-padding-right--#{$token} {
+    padding-right: $value !important;
+  }
+}
+
+
+/**
+ * `padding-top`
+ */
+
+@each $token, $value in $spacing-values {
+  .u-padding-top--#{$token} {
+    padding-top: $value !important;
+  }
+}
