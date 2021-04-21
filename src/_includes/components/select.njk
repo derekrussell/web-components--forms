@@ -1,0 +1,10 @@
+{% macro select(props) %}
+<div class="form-group" {% if props.required == true %}data-required{% endif %}>
+  <label class="label" for="{{ props.id }}">{{ props.label }}</label>
+  <select class="select" id="{{ props.id }}" name="props.name" required>
+    {% for item in props.items %}
+      <option value="{{ item.value }}">{{ item.text }}</option>
+    {% endfor %}
+  </select>
+</div>
+{% endmacro %}

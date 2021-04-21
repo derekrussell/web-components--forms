@@ -1,11 +1,105 @@
 {% extends "layouts/page.html" %}
 
-{% from "components/component.html" import component %}
+{% from "components/button.njk" import button %}
+{% from "components/checkbox.njk" import checkbox %}
+{% from "components/input.njk" import input %}
+{% from "components/radio_group.njk" import radio_group %}
+{% from "components/select.njk" import select %}
 
 {% block content %}
 
-{# component({
-  prop: "value"
-}) #}
+<!-- Title -->
+{{ select({
+  label: "Title",
+  id: "title",
+  name: "title",
+  required: true,
+  items: [
+    {
+      value: "mr",
+      text: "Mr."
+    },
+    {
+      value: "mrs",
+      text: "Mrs."
+    },
+    {
+      value: "dr",
+      text: "Dr."
+    }
+  ]
+}) }}
+
+<!-- First Name -->
+{{ input({
+  label: "First name",
+  id: "first-name",
+  name: "first-name",
+  required: true
+}) }}
+
+<!-- Last Name -->
+{{ input({
+  label: "Last name",
+  id: "last-name",
+  name: "last-name",
+  required: true
+}) }}
+
+<!-- Business Type -->
+{{ radio_group({
+  legend: "Business type",
+  name: "business-type",
+  items: [
+    {
+      checked: true,
+      value: "sole-trader",
+      id: "sole-trader",
+      text: "Sole trader"
+    },
+    {
+      value: "partnership",
+      id: "partnership",
+      text: "Partnership"
+    },
+    {
+      value: "limited-company",
+      id: "limited-company",
+      text: "Limited Company"
+    }
+  ]
+}) }}
+
+<!-- Telephone Number -->
+{{ input({
+  label: "Telephone number",
+  id: "telephone-number",
+  name: "telephone-number",
+  mode: "numeric",
+  pattern: "[0-9]*",
+  required: true
+}) }}
+
+<!-- Email Address -->
+{{ input({
+  label: "Email address",
+  id: "email-address",
+  name: "email-address",
+  required: true
+}) }}
+
+<!-- Marketing Consent -->
+{{ checkbox({
+  label: "I agree to the terms and conditions.",
+  id: "marketing-consent",
+  name: "marketing-consent",
+  required: true,
+  type: "checkbox"
+}) }}
+
+<!-- Actions-->
+{{ button({
+  text: "Submit"
+}) }}
 
 {% endblock %}

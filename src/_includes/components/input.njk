@@ -1,0 +1,6 @@
+{% macro input(props) %}
+<div class="form-group" {% if props.required == true %}data-required{% endif %}>
+  <label class="label" for="{{ props.id }}"> {{ props.label }}</label>
+  <input class="input" id="{{ props.id }}" inputmode="{{ props.mode }}" name="{{ props.name }}" pattern="{{ props.pattern }}" {% if props.required == true %}required{% endif %} type="{{ props.type }}">
+</div>
+{% endmacro %}

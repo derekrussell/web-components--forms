@@ -1,0 +1,11 @@
+/* `form-group`
+-------------------------------------------------- */
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group[data-required] label::after {
+  content: "*";
+  margin-left: 2px;
+}

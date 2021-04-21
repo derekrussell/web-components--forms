@@ -1,0 +1,37 @@
+/* `button`
+-------------------------------------------------- */
+
+@mixin button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 13px 18px;
+  text-align: center;
+  text-decoration: none;
+  
+  &:focus {
+    outline: 2px solid #fd0;
+    outline-offset: 0;
+  }
+}
+
+.button {
+  @include button;
+  background-color: #fff;
+  background-image: linear-gradient(#fff, #f8f9fa);
+  border-color: #b4bcc1;
+  color: #0067af;
+}
+
+.button--primary {
+  @include button;
+  background-color: #55b336;
+  background-image: linear-gradient(#55b336, #4B9e2f);
+  border-color: #3f8528;
+  color: #fff;
+}

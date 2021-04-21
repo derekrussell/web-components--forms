@@ -1,0 +1,8 @@
+{% macro checkbox(props) %}
+<div class="form-group" {% if props.required == true %}data-required{% endif %}>
+  <div class="checkbox">
+    <input class="checkbox__input" id="{{ props.id }}" inputmode="{{ props.mode }}" name="{{ props.name }}" pattern="{{ props.pattern }}" {% if props.required == true %}required{% endif %} type="{{ props.type }}">
+  <label class="checkbox__label" for="{{ props.id }}"> {{ props.label }}</label>
+  </div>
+</div>
+{% endmacro %}

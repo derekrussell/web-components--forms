@@ -1,0 +1,15 @@
+{% macro radio_group(props) %}
+<div class="form-group">
+  <fieldset class="fieldset">
+    <legend class="label">{{ props.legend }}</legend>
+    <div class="radio-group">
+      {% for item in props.items %}
+        <div class="radio-group__unit">
+          <input {% if item.checked == true %}checked {% endif %}class="radio-group__input" id="{{ item.id }}" name="{{ props.name }}" type="radio" value="{{ item.value }}">
+          <label class="radio-group__label" for="{{ item.id }}">{{ item.text }}</label>
+        </div>
+      {% endfor %}
+    </div>
+  </fieldset>
+</div>
+{% endmacro %}

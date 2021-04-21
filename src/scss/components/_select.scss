@@ -1,0 +1,23 @@
+/* `select`
+-------------------------------------------------- */
+
+.select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appnce: none;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1904592/icon--carat--down.svg"),
+    linear-gradient(#fff, #f8f9fa);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: right 13px top 50%, 0 0;
+  background-size: 12px auto, 100%;
+  border: 1px solid #b4bcc1;
+  display: block;
+  font-size: 18px;
+  padding: 13px 42px 13px 18px;
+  
+  &:focus {
+    outline: 2px solid #fd0;
+    outline-offset: 0;
+  }
+}
